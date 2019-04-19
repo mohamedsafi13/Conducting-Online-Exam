@@ -21,7 +21,7 @@ Time Remaining is <input id="minutes" type="text" style="width: 14px; border: no
 <input type="button" value="3" onclick="ques3()" />
 <input type="button" value="4" onclick="ques4()" />
 <input type="button" value="5" onclick="ques5()" />
- <%--@include file="Buttons.jsp" --%>
+
 <%
 
 String[] number=new String[5];
@@ -44,7 +44,6 @@ while (details.readRecord())
 	opt2[i]=details.get("B");
 	opt3[i]=details.get("C");
 	opt4[i]=details.get("D");
-	//System.out.println(number[i] + ":" + question[i]);
 	i=i+1;
 }
 details.close();
@@ -75,13 +74,6 @@ for (int k = question.length - 1; k > 0; k--)
   opt3[k]=ch3;
   opt4[k]=ch4;
 }
-
-/*List<String> list = Arrays.asList(question);
-Collections.shuffle(list);
-Object[] randomArray = list.toArray();
-System.out.println(randomArray[0]);
-System.out.println(randomArray[1]);*/
-
 %>
 
 <script>
