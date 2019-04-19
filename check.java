@@ -44,8 +44,7 @@ public class check extends HttpServlet {
 				{
 					RequestDispatcher rq=request.getRequestDispatcher("./TestPage1.jsp");
 					request.setAttribute("mail_Id",mailid);
-					//response.sendRedirect("./TestPage1.jsp");
-					rq.include(request, response);
+		                        rq.include(request, response);
 					i=i+1;
 					break;
 				}
