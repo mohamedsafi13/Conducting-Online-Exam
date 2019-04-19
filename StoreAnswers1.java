@@ -42,8 +42,6 @@ public class StoreAnswers1 extends HttpServlet
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		HttpSession session = request.getSession(false);
-		 if(session != null)
-		 {
 		try
 		{ 
 		CsvReader details= new CsvReader("D:\\Questions.csv");
@@ -108,8 +106,6 @@ public class StoreAnswers1 extends HttpServlet
 		RequestDispatcher rq=request.getRequestDispatcher("/ValidateAnswers");
 		request.setAttribute("mail", mailid);
 		rq.include(request, response);
-		session.invalidate();
-	     }
 		
 		out.print("<html><body>");
 		out.print("<H1>THANK YOU!!!</H1>");
