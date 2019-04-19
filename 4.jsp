@@ -14,8 +14,6 @@ String options1=request.getParameter("options1");
 String options2=request.getParameter("options2");
 String options3=request.getParameter("options3");
 String options4=request.getParameter("options4");
-
-//System.out.println(options2);
 %>
 
 <script>
@@ -86,7 +84,6 @@ else if(document.getElementById("opt4").checked)
 	{
 	a=document.getElementById("opt4").value;
 	}
-//alert(a);
 document.getElementById("answer4").value=a;
 }
 
