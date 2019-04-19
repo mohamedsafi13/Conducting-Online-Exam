@@ -37,10 +37,6 @@ public class StoreAnswers1 extends HttpServlet
 		String qs=request.getParameter("questions");
 		Gson gson=new Gson();
 		String[] q=gson.fromJson(qs, String[].class);
-		//System.out.println(q[4]);
-		//String mail="\""+mailid+"\"";
-		//String usrname=mailid.substring(0,mailid.indexOf("@"));
-		//String domain=mailid.substring(mailid.indexOf("@")+1);
 		int i=0;
 		int score=0;
 		response.setContentType("text/html");
@@ -57,9 +53,7 @@ public class StoreAnswers1 extends HttpServlet
 			crctOptions[i]=details.get("Correct choice");
 			qes[i]=details.get("Question");
 			i=i+1;
-			//System.out.println(crctOptions[0]);
-			//System.out.println(request.getParameter("ans1"));
-		}
+	        }
 		details.close();
 		}
 		catch (FileNotFoundException e)
